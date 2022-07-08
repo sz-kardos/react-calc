@@ -12,7 +12,6 @@ function App() {
     }
 
 
-
     function clear() {
         setResult("");
     }
@@ -40,11 +39,10 @@ function App() {
 
             <div className="calculator-grid">
 
-
                 <button id="span-two" onClick={clear}>
                     AC
                 </button>
-                <button id="cl-btn" name="C" onClick={handleSlice}>
+                <button name="C" onClick={handleSlice}>
                     C
                 </button>
                 <button name="/" onClick={handleClick}>
