@@ -12,6 +12,7 @@ function App() {
     }
 
 
+
     function clear() {
         setResult("");
     }
@@ -24,21 +25,30 @@ function App() {
         }
     }
 
+    function handleSlice() {
+        setResult(result.slice(0, -1))
+    }
+
+
+
+
     return (
-        <div className="container">
+        <div className="App">
             <from>
-                <input type="text" value={result} ref={inputRef} />
+                <input className="output" type="text" value={result} ref={inputRef} />
             </from>
 
-            <div className="keypad">
-                <button id="clear" onClick={clear}>
+            <div className="calculator-grid">
+
+
+                <button id="span-two" onClick={clear}>
                     AC
                 </button>
-                <button name="+/-" onClick={handleClick}>
-                    +/-
+                <button id="cl-btn" name="C" onClick={handleSlice}>
+                    C
                 </button>
-                <button className="count" name="+" onClick={handleClick}>
-                    +
+                <button name="/" onClick={handleClick}>
+                    /
                 </button>
                 <button name="7" onClick={handleClick}>
                     7
@@ -49,8 +59,8 @@ function App() {
                 <button name="9" onClick={handleClick}>
                     9
                 </button>
-                <button className="count" name="-" onClick={handleClick}>
-                    -
+                <button name="*" onClick={handleClick}>
+                    *
                 </button>
                 <button name="4" onClick={handleClick}>
                     4
@@ -61,8 +71,8 @@ function App() {
                 <button name="6" onClick={handleClick}>
                     6
                 </button>
-                <button className="count" name="*" onClick={handleClick}>
-                    *
+                <button name="-" onClick={handleClick}>
+                    -
                 </button>
                 <button name="1" onClick={handleClick}>
                     1
@@ -73,17 +83,17 @@ function App() {
                 <button name="3" onClick={handleClick}>
                     3
                 </button>
-                <button className="count" name="/" onClick={handleClick}>
-                    /
+                <button name="+" onClick={handleClick}>
+                    +
                 </button>
                 <button name="0" onClick={handleClick}>
                     0
                 </button>
                 <button name="." onClick={handleClick}>
-                    .
+                    ,
                 </button>
-                <button className="count" id="result" onClick={calculate}>
-                   =
+                <button id="span-two" onClick={calculate}>
+                    =
                 </button>
             </div>
         </div>
